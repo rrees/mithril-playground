@@ -10,7 +10,10 @@
 
         // your code goes here!
 
-        m.render(root, "Hello world");
+        m.render(root, m("main", [
+                m("h1", "Hello world"),
+                m("p", "Goodbye world")
+                ]));
         </script>
     </body>
 </html>
