@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Timer - MithrilJS</title>
+        <meta charset="utf8">
+    </head>
+    <body>
+        <script src="https://unpkg.com/mithril/mithril.js"></script>
+        <script>
+        var root = document.body
+
+        // your code goes here!
+
+        let currentTime =  new Date();
+
+
+        const Timer = {
+            view: function() {
+                return m("main", [
+                    m("h1", "Timer"),
+                    m("p", `Time: ${currentTime}`),
+                ]);
+            }
+        };
+
+        m.mount(root, Timer);
+
+        setInterval(() => {
+            currentTime = new Date();
+            m.redraw()}, 1000);
+
+        </script>
+    </body>
+</html>
